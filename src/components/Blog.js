@@ -81,10 +81,11 @@ const blogs = [
 
 function ComponentBlog({ title, date, description, image, onViewDetails }) {
   return (
-    <div className="border rounded-lg shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col w-full bg-white transform hover:-translate-y-2 hover:scale-105">
-      <img className="w-full h-64 object-cover" src={image} alt={title} />
+    <div className="border rounded-lg shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col w-full md:w-4/5 lg:w-9/12 bg-white transform hover:-translate-y-2 hover:scale-105 mx-auto mb-6">
+      <img className="w-full h-56 object-cover" src={image} alt={title} />{" "}
+      {/* Reduced height from h-64 to h-56 */}
       <div className="p-6 text-left flex flex-col flex-grow">
-        <h2 className="text-2xl font-semibold mb-3 text-gray-900">{title}</h2>
+        <h2 className="text-xl font-semibold mb-3 text-gray-900">{title}</h2>
         <p className="text-gray-700 text-base mb-5 flex-grow">{description}</p>
         <div className="mt-auto">
           <button
@@ -127,7 +128,7 @@ const Blog = () => {
 
   return (
     <div className="my-10">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {currentBlogs.map((blog, index) => (
           <ComponentBlog
             key={index}
