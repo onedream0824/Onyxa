@@ -1,6 +1,7 @@
-import React, { useState, useRef } from "react";
+import React from "react";
+// import { useState, useRef } from "react";
 import {
-  ChevronDown,
+  // ChevronDown,
   Calendar,
   Search,
   Facebook,
@@ -8,9 +9,10 @@ import {
   Instagram,
 } from "lucide-react";
 import logo from "../assets/Logo.svg";
+import "./Add.css";
 
 const Header = () => {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  // const [isDropdownOpen, setDropdownOpen] = useState(false);
   // const productsBtnRef = useRef(null); // Reference to the PRODUCTS button
 
   // const toggleDropdown = () => {
@@ -19,7 +21,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow font-thin">
-      <div className="border-b border-gray-200 container mx-auto px-4 md:px-16 pt-1 pb-0 min-w-full">
+      <div className="border-b border-gray-200 container mx-auto px-4 md:px-16 pt-1 pb-0 min-w-full slide-down">
         <div className="flex items-center justify-between">
           <nav className="flex gap-4 md:gap-16 items-center">
             <a href="/" rel="noopener noreferrer">

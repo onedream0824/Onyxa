@@ -30,7 +30,7 @@
 @keyframes fadeInUp {
   0% {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(80px);
   }
   100% {
       opacity: 1;
@@ -39,5 +39,20 @@
 }
 
 .animate-fadeInUp {
-  animation: fadeInUp 0.5s ease-out forwards;
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-down {
+  animation: slideDown 700ms ease-out; /* Directly use animation shorthand */
 }
