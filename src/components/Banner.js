@@ -72,7 +72,7 @@ const Banner = () => {
           transform: `translate(${imageOffsetX}%, ${imageOffsetY}%)`,
         }}
       />
-      <div className="absolute text-white flex flex-col items-center justify-center bg-black/60 w-[195px] h-[175px] lg:w-[500px] lg:h-[450px] md:w-[350px] md:h-[320px] sm:w-[233px] sm:h-[210px] ">
+      <div className="absolute text-white flex flex-col items-center justify-center image-animate-fadeInUP bg-black/60 w-[195px] h-[175px] lg:w-[500px] lg:h-[450px] md:w-[350px] md:h-[320px] sm:w-[233px] sm:h-[210px] ">
         <p
           className={`lg:text-5xl md:text-3xl sm:text-xl text-lg lg:py-2 py-1 transition-opacity duration-300 ${
             fade ? "opacity-0" : "opacity-100"
