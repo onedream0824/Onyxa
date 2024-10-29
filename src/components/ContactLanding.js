@@ -9,7 +9,7 @@ const ContactLanding = () => {
         <img
           src={ContactLandingImage}
           alt="Contact Us"
-          className="rounded-lg shadow-lg"
+          className="rounded-lg shadow-lg animate-fadeInUp"
         />
       </div>
       <div className="w-full md:w-6/12 p-5">
