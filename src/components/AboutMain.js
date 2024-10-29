@@ -76,7 +76,7 @@ const AboutMain = () => {
         <img
           src={IntroductionImage}
           alt="About Onyxa"
-          className="lg:max-w-[70vh] md:max-w-[40vh] sm:max-w-[28vh] max-w-[20vh] shadow-lg rounded-lg transition-transform duration-300 hover:scale-105"
+          className="lg:max-w-[70vh] md:max-w-[40vh] sm:max-w-[28vh] max-w-[20vh] shadow-lg rounded-lg transition-transform duration-300 hover:scale-105 animate-fadeInUp"
         />
       </div>
     </div>
