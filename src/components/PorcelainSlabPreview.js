@@ -28,13 +28,10 @@ const PorcelainSlabPreview = () => {
 
   function getImageCount(width) {
     if (width >= 1024) {
-      // lg screens
-      return 3;
+      return 4;
     } else if (width >= 768) {
-      // md screens
       return 2;
     } else {
-      // sm screens
       return 1;
     }
   }
@@ -58,15 +55,17 @@ const PorcelainSlabPreview = () => {
     );
 
   return (
-    <section className="bg-gradient-to-br from-gray-800 to-gray-900 py-16 px-4 sm:px-6 lg:px-8 text-white font-thin">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-          Featured <span className="text-indigo-300">Porcelain Slabs</span>
-        </h2>
-        <p className="text-gray-300 mb-8">
-          Discover our premium series of porcelain slabs, perfect for kitchen
-          countertops, bathroom vanities, and wall cladding.
-        </p>
+    <section className="bg-gradient-to-r from-gray-900 to-black py-16 px-4 sm:px-6 lg:px-8 text-white font-thin">
+      <div className="max-w-7xl mx-auto text-center">
+        <div className="mt-10 mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+            Featured <span className="text-indigo-300">Porcelain Slabs</span>
+          </h2>
+          <p className="text-gray-300 mb-8">
+            Discover our premium series of porcelain slabs, perfect for kitchen
+            countertops, bathroom vanities, and wall cladding.
+          </p>
+        </div>
         <div className="flex justify-center items-center space-x-8 mb-6">
           <button
             onClick={prevSlide}
@@ -75,7 +74,7 @@ const PorcelainSlabPreview = () => {
           >
             <ChevronLeft className="w-8 h-8" />
           </button>
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
             {visibleImages.map((image, index) => (
               <div
                 key={index}
@@ -97,9 +96,11 @@ const PorcelainSlabPreview = () => {
             <ChevronRight className="w-8 h-8" />
           </button>
         </div>
-        <button className="bg-indigo-500 text-white text-sm py-2 px-6 rounded-md hover:bg-indigo-400 transition duration-300">
-          Check More
-        </button>
+        <div className="mt-24">
+          <button className="bg-indigo-500 text-white text-sm py-2 px-6 rounded-md hover:bg-indigo-400 transition duration-300">
+            Check More
+          </button>
+        </div>
       </div>
     </section>
   );

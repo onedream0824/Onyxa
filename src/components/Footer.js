@@ -5,7 +5,7 @@ import logo from "../assets/Logo.svg";
 const Footer = () => {
   return (
     <footer className="bg-gray-200 text-gray-600 pt-8 border-t font-thin">
-      <div className="container mx-auto px-4">
+      <div className="container max-w-2xl sm:max-w-2xl md:max-w-3xl lg:max-w-7xl  mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-semibold text-lg mb-4 border-b pb-2">

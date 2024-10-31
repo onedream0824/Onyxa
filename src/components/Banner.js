@@ -55,72 +55,74 @@ const Banner = () => {
   const imageOffsetY = (mousePosition.y / window.innerHeight) * 1;
 
   return (
-    <div className="w-full h-[98vh] flex justify-center items-center relative overflow-hidden font-thin">
-      <img
-        src={Background}
-        alt="background"
-        className="absolute transform -translate-x-1/2 -translate-y-1/2 w-[420px] h-[300px] lg:w-[1400px] lg:h-[1000px] md:w-[840px] md:h-[600px] sm:w-[560px] sm:h-[400px]"
-        style={{
-          transform: `translate(${backgroundOffsetX}%, ${backgroundOffsetY}%)`,
-        }}
-      />
-      <img
-        src={Image}
-        alt="image"
-        className="absolute transform -translate-x-1/2 -translate-y-1/2 w-[270px] h-[170px] lg:w-[700px] lg:h-[440px] md:w-[500px] md:h-[314px] sm:w-[318px] sm:h-[200px] "
-        style={{
-          transform: `translate(${imageOffsetX}%, ${imageOffsetY}%)`,
-        }}
-      />
-      <div className="absolute text-white flex flex-col items-center justify-center image-animate-fadeInUP bg-black/60 w-[195px] h-[175px] lg:w-[500px] lg:h-[450px] md:w-[350px] md:h-[320px] sm:w-[233px] sm:h-[210px] ">
-        <p
-          className={`lg:text-5xl md:text-3xl sm:text-xl text-lg lg:py-2 py-1 transition-opacity duration-300 ${
-            fade ? "opacity-0" : "opacity-100"
-          }`}
-        >
-          {slides[currentSlide].title}
-        </p>
-        <p
-          className={`lg:text-5xl md:text-3xl sm:text-xl text-lg lg:py-2 py-1 transition-opacity duration-300 ${
-            fade ? "opacity-0" : "opacity-100"
-          }`}
-        >
-          {slides[currentSlide].subtitle1}
-        </p>
-        <p
-          className={`lg:text-5xl md:text-3xl sm:text-xl text-lg lg:py-2 py-1 transition-opacity duration-300 ${
-            fade ? "opacity-0" : "opacity-100"
-          }`}
-        >
-          {slides[currentSlide].subtitle2}
-        </p>
-        {["PORCELAIN", "PREMIUM"].includes(slides[currentSlide].title) && (
-          <button className="bg-white lg:px-6 lg:py-2 md:px-4 md:py-1 sm:px-3 lg:my-5 md:my-3 sm:my-1 text-black hover:bg-black hover:text-white border border-white">
-            See Products
+    <div className="bg-gray-50 ">
+      <div className="w-full h-[98vh] max-w-7xl mx-auto flex justify-center items-center relative overflow-hidden font-thin">
+        <img
+          src={Background}
+          alt="background"
+          className="absolute transform -translate-x-1/2 -translate-y-1/2 w-[420px] h-[300px] lg:w-[1200px] lg:h-[800px] md:w-[840px] md:h-[560px] sm:w-[600px] sm:h-[400px]"
+          style={{
+            transform: `translate(${backgroundOffsetX}%, ${backgroundOffsetY}%)`,
+          }}
+        />
+        <img
+          src={Image}
+          alt="image"
+          className="absolute transform -translate-x-1/2 -translate-y-1/2 w-[270px] h-[170px] lg:w-[700px] lg:h-[440px] md:w-[500px] md:h-[314px] sm:w-[318px] sm:h-[200px] "
+          style={{
+            transform: `translate(${imageOffsetX}%, ${imageOffsetY}%)`,
+          }}
+        />
+        <div className="absolute text-white flex flex-col items-center justify-center image-animate-fadeInUP bg-black/60 w-[195px] h-[175px] lg:w-[500px] lg:h-[450px] md:w-[350px] md:h-[320px] sm:w-[233px] sm:h-[210px] ">
+          <p
+            className={`lg:text-5xl md:text-3xl sm:text-xl text-lg lg:py-2 py-1 transition-opacity duration-300 ${
+              fade ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            {slides[currentSlide].title}
+          </p>
+          <p
+            className={`lg:text-5xl md:text-3xl sm:text-xl text-lg lg:py-2 py-1 transition-opacity duration-300 ${
+              fade ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            {slides[currentSlide].subtitle1}
+          </p>
+          <p
+            className={`lg:text-5xl md:text-3xl sm:text-xl text-lg lg:py-2 py-1 transition-opacity duration-300 ${
+              fade ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            {slides[currentSlide].subtitle2}
+          </p>
+          {["PORCELAIN", "PREMIUM"].includes(slides[currentSlide].title) && (
+            <button className="bg-white lg:px-6 lg:py-2 md:px-4 md:py-1 sm:px-3 lg:my-5 md:my-3 sm:my-1 text-black hover:bg-black hover:text-white border border-white">
+              See Products
+            </button>
+          )}
+          <button
+            className="absolute left-0 top-1/2 -translate-y-1/2 text-white text-4xl px-4"
+            onClick={prevSlide}
+          >
+            &lt;
           </button>
-        )}
-        <button
-          className="absolute left-0 top-1/2 -translate-y-1/2 text-white text-4xl px-4"
-          onClick={prevSlide}
-        >
-          &lt;
-        </button>
-        <button
-          className="absolute right-0 top-1/2 -translate-y-1/2 text-white text-4xl px-4"
-          onClick={nextSlide}
-        >
-          &gt;
-        </button>
-        <div className="absolute lg:bottom-5 md:bottom-3 sm:bottom-2 bottom-1 flex space-x-2">
-          {slides.map((_, index) => (
-            <div
-              key={index}
-              className={`w-2 h-2 rounded-full cursor-pointer ${
-                currentSlide === index ? "bg-white" : "bg-gray-400"
-              }`}
-              onClick={() => goToSlide(index)}
-            />
-          ))}
+          <button
+            className="absolute right-0 top-1/2 -translate-y-1/2 text-white text-4xl px-4"
+            onClick={nextSlide}
+          >
+            &gt;
+          </button>
+          <div className="absolute lg:bottom-5 md:bottom-3 sm:bottom-2 bottom-1 flex space-x-2">
+            {slides.map((_, index) => (
+              <div
+                key={index}
+                className={`w-2 h-2 rounded-full cursor-pointer ${
+                  currentSlide === index ? "bg-white" : "bg-gray-400"
+                }`}
+                onClick={() => goToSlide(index)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

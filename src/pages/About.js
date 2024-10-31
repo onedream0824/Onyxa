@@ -7,7 +7,7 @@ import Ask from "../components/Ask";
 
 const About = () => {
   return (
-    <div className="mt-28">
+    <div className="md:mt-64 lg:mt-28 mt-48">
       <AboutMain />
       <AboutIntroduction />
       <Ask />
