@@ -18,7 +18,7 @@ const blogs = [
     title: "Nano Ink Quartz: A Deep Dive into Advanced Quartz Technologies",
     date: "June 20, 2024",
     description:
-      "When choosing quartz surfaces for interior and exterior designs, Nano Ink Quartz is emerging as a game-changing material. This advanced technology significantly enhances the depth",
+      "When choosing quartz surfaces for interior and exterior designs, Nano Ink Quartz is emerging as a game-changing material.",
     image: Blog_1,
   },
   {
@@ -82,8 +82,7 @@ const blogs = [
 function ComponentBlog({ title, date, description, image, onViewDetails }) {
   return (
     <div className="border rounded-lg shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col w-full md:w-4/5 lg:w-9/12 bg-white transform hover:-translate-y-2 hover:scale-105 mx-auto mb-6">
-      <img className="w-full h-56 object-cover" src={image} alt={title} />{" "}
-      {/* Reduced height from h-64 to h-56 */}
+      <img className="w-full h-44 object-cover" src={image} alt={title} />{" "}
       <div className="p-6 text-left flex flex-col flex-grow">
         <h2 className="text-xl font-semibold mb-3 text-gray-900">{title}</h2>
         <p className="text-gray-700 text-base mb-5 flex-grow">{description}</p>
@@ -127,8 +126,8 @@ const Blog = () => {
   };
 
   return (
-    <div className="my-10">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="py-10 bg-gray-50">
+      <div className="container max-w-xs sm:max-w-xs md:max-w-3xl lg:max-w-7xl mx-auto px-2 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
         {currentBlogs.map((blog, index) => (
           <ComponentBlog
             key={index}

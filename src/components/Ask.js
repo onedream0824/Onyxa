@@ -25,26 +25,28 @@ const Ask = () => {
   ];
 
   return (
-    <div className="bg-white text-gray-800 p-32 rounded-lg transition-transform transform">
-      <h2 className="text-4xl font-bold text-center mb-16">
-        YOU ASKED, WE ANSWER
-      </h2>
-      {questionsAnswers.map((item, index) => (
-        <div key={index} className="mb-8">
-          <p
-            className="text-2xl font-semibold cursor-pointer relative group"
-            onClick={() => toggleQuestion(index)}
-          >
-            {item.question}
-            <span className="block h-1 w-full bg-indigo-600 rounded mt-2 transition-all duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100"></span>
-          </p>
-          {openQuestion === index && (
-            <p className="mt-2 text-lg text-gray-700 transition-all duration-300 ease-in-out">
-              {item.answer}
+    <div className="bg-gradient-to-r from-gray-900 to-black">
+      <div className="max-w-lg sm:max-w-lg md:max-w-2xl lg:max-w-7xl mx-auto py-32 lg:px-10 md:px-6 sm:px-1 px-4 rounded-lg transition-transform transform">
+        <h2 className="text-4xl font-bold text-center mb-16 text-gray-200">
+          YOU ASKED, WE ANSWER
+        </h2>
+        {questionsAnswers.map((item, index) => (
+          <div key={index} className="mb-8">
+            <p
+              className="text-2xl font-semibold cursor-pointer relative group text-gray-300"
+              onClick={() => toggleQuestion(index)}
+            >
+              {item.question}
+              <span className="block h-1 w-full bg-indigo-600 rounded mt-2 transition-all duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100"></span>
             </p>
-          )}
-        </div>
-      ))}
+            {openQuestion === index && (
+              <p className="mt-2 text-lg text-gray-400 transition-all duration-300 ease-in-out">
+                {item.answer}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

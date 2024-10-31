@@ -9,7 +9,7 @@ import Appointment from "../components/Appointment";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className="mt-20">
       <Banner />
       <Why />
       <StoneCollection />

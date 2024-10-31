@@ -3,7 +3,7 @@ import background from "../assets/7.png";
 
 const Appointment = () => {
   return (
-    <div className="flex items-center justify-center w-full h-full p-8 md:p-32 bg-black text-white relative">
+    <div className="flex items-center justify-center w-full h-full p-8 md:p-32 bg-gradient-to-r from-gray-900 to-black text-white relative">
       <div className="flex flex-col items-center justify-center w-full max-w-4xl p-10 md:py-15 md:px-32 border border-white relative z-10">
         <h2 className="text-2xl md:text-4xl py-2">
           Want to Visit Our Stone Showroom?

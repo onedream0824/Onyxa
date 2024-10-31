@@ -4,7 +4,7 @@ import ContactLandingImage from "../assets/contact.jpg";
 
 const ContactLanding = () => {
   return (
-    <div className="relative flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-gray-800 to-gray-900 text-white p-10">
+    <div className="relative flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-gray-900 to-black text-white p-10">
       <div className="w-full md:w-6/12 p-5">
         <img
           src={ContactLandingImage}

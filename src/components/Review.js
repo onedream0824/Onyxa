@@ -92,7 +92,7 @@ const Review = () => {
   }, []);
 
   const getSlidesToShow = () => {
-    if (windowWidth < 600) return 1;
+    if (windowWidth < 764) return 1;
     if (windowWidth < 1024) return 2;
     return 3;
   };
@@ -108,62 +108,71 @@ const Review = () => {
   };
 
   return (
-    <div className="bg-white py-12 px-4 sm:px-6 lg:px-8 font-thin">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl text-center mb-12">
-          <span className="text-black">People</span>{" "}
-          <span className="text-black font-bold">Reviews</span>{" "}
-          <span className="text-black">About Onyxa</span>
-        </h2>
+    <div className="bg-gray-50">
+      <div className="max-w-2xl sm:max-w-2xl md:max-w-3xl lg:max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 font-thin">
+        <div className="mx-auto">
+          <h2 className="text-4xl text-center mb-12">
+            <span className="text-black font-bold">What Our Clients Say</span>
+          </h2>
 
-        <div className="mb-8 text-center">
-          <h3 className="text-xl font-semibold mb-2">ONYXA CANADA INC.</h3>
-          <div className="flex items-center justify-center">
-            <span className="text-4xl font-bold mr-2">4.7</span>
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-6 h-6 text-yellow-400 fill-current"
-                />
-              ))}
-            </div>
-          </div>
-          <p className="text-sm text-gray-500 mt-1">
-            Overall rating out of 50 Google reviews
-          </p>
-        </div>
-
-        <Slider {...settings}>
-          {reviews.map((review, index) => (
-            <div key={index} className="p-10">
-              <div className="bg-gradient-to-r from-gray-50 to-gray-200 rounded-lg shadow-xl p-6 border-b-4 border-gray-100 transition-transform transform hover:scale-105">
-                <div className="flex items-center mb-4">
-                  <img
-                    src={review.image}
-                    alt={review.name}
-                    className="w-12 h-12 rounded-full border-2 border-white shadow-md mr-4"
+          <div className="mb-8 text-center">
+            <h3 className="text-xl font-semibold mb-2">ONYXA CANADA INC.</h3>
+            <div className="flex items-center justify-center">
+              <span className="text-4xl font-bold mr-2">4.7</span>
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-6 h-6 text-yellow-400 fill-current"
                   />
-                  <div>
-                    <h4 className="text-black font-bold text-lg">
-                      {review.name}
-                    </h4>
-                    <div className="flex">
+                ))}
+              </div>
+            </div>
+            <p className="text-sm text-gray-500 mt-1">
+              Overall rating out of 50 Google reviews
+            </p>
+          </div>
+
+          <Slider {...settings}>
+            {reviews.map((review, index) => (
+              <div key={index} className="p-8">
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:shadow-2xl duration-300 ease-in-out">
+                  <div className="px-10 py-8">
+                    <div className="flex items-center mb-6">
+                      <img
+                        src={review.image}
+                        alt={review.name}
+                        className="w-20 h-20 rounded-full border-4 border-gray-200 shadow-sm"
+                      />
+                      <div className="ml-4">
+                        <h4 className="text-lg font-semibold text-gray-800">
+                          {review.name}
+                        </h4>
+                        <p className="text-sm text-gray-500">{review.date}</p>
+                      </div>
+                    </div>
+                    <div className="flex mb-4">
                       {[...Array(review.rating)].map((_, i) => (
                         <Star
                           key={i}
-                          className="w-5 h-5 text-yellow-300 fill-current"
+                          className="w-5 h-5 text-yellow-400 fill-current"
                         />
                       ))}
                     </div>
+                    <p className="text-gray-600 leading-relaxed">
+                      {review.text}
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-r from-indigo-500 to-purple-600 px-10 py-4">
+                    <h4 className="text-white text-sm uppercase tracking-wider">
+                      Customer Review
+                    </h4>
                   </div>
                 </div>
-                <p className="text-sm text-gray-600 mb-2">{review.date}</p>
-                <p className="text-base text-gray-800">{review.text}</p>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
   );

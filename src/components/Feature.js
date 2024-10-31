@@ -33,7 +33,7 @@ const Feature = () => {
         </h1>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 w-full md:w-6/12">
+      <div className="grid lg:grid-cols-2 gap-8 w-full md:w-6/12 sm:4/12">
         <div
           ref={ref1}
           className={`relative group ${
@@ -49,9 +49,9 @@ const Feature = () => {
         </div>
 
         <div
-          ref={ref1}
+          ref={ref2}
           className={`relative group ${
-            isVisible1 ? "opacity-100 slide-left" : "opacity-0"
+            isVisible2 ? "opacity-100 slide-left" : "opacity-0"
           }`}
         >
           <div className="absolute inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
@@ -63,9 +63,9 @@ const Feature = () => {
         </div>
 
         <div
-          ref={ref1}
+          ref={ref2}
           className={`relative group ${
-            isVisible1 ? "opacity-100 slide-right" : "opacity-0"
+            isVisible2 ? "opacity-100 slide-right" : "opacity-0"
           }`}
         >
           <div className="absolute inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
