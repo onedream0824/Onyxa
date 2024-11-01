@@ -1,6 +1,6 @@
 import React from "react";
 import { Facebook, Instagram, Linkedin, MessageSquare } from "lucide-react";
-import logo from "../assets/Logo.png";
+import logo from "../assets/Logo-Onyxa.svg";
 
 const Footer = () => {
   return (
@@ -62,7 +62,7 @@ const Footer = () => {
 
           <div className="flex flex-col justify-center items-center my-10">
             <img src={logo} alt="Onyxa Logo" width={200} height={60} />
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-800">
               © 2024, Onyxa Canada, Inc. All rights reserved.
             </p>
           </div>
