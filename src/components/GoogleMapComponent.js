@@ -2,13 +2,13 @@ import React from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
 const containerStyle = {
-  width: "100%", // Full width
-  height: "400px", // Adjust height as needed
+  width: "100%",
+  height: "400px",
 };
 
 const center = {
-  lat: 40.712776, // Example latitude for New York
-  lng: -74.005974, // Example longitude for New York
+  lat: 40.712776,
+  lng: -74.005974,
 };
 
 const GoogleMapComponent = ({ apiKey }) => {
@@ -17,10 +17,9 @@ const GoogleMapComponent = ({ apiKey }) => {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={10} // Adjust zoom level as needed
+        zoom={10}
         className="rounded-xl shadow-lg overflow-hidden" // TailwindCSS classes
       >
-        {/* Additional map features like markers can be added here */}
       </GoogleMap>
     </LoadScript>
   );
