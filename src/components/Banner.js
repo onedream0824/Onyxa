@@ -67,7 +67,7 @@ const Banner = () => {
         />
         <img
           src={Image}
-          alt="image"
+          alt="Porcelain and quartz stone showcase"
           className="absolute transform -translate-x-1/2 -translate-y-1/2 w-[270px] h-[170px] lg:w-[700px] lg:h-[440px] md:w-[500px] md:h-[314px] sm:w-[318px] sm:h-[200px] drop-shadow-2xl"
           style={{
             transform: `translate(${imageOffsetX}%, ${imageOffsetY}%)`,
