@@ -55,17 +55,21 @@ const Header = () => {
                 CONTACT US
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-gold group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a className="bg-gradient-gold text-luxury-dark px-6 py-2 rounded-full hover:shadow-glow transition-all duration-300 font-semibold shadow-luxury transform hover:scale-105 hover:brightness-110">
+              <a href="/offers" className="bg-gradient-gold text-luxury-dark px-6 py-2 rounded-full hover:shadow-glow transition-all duration-300 font-semibold shadow-luxury transform hover:scale-105 hover:brightness-110">
                 LIMITED OFFERS
               </a>
             </div>
           </nav>
           <div className="flex md:flex-row flex-col items-center space-x-4 justify-end">
-            <a className="flex items-center space-x-2 text-white font-bold hover:text-luxury-gold transition-all duration-300 group">
+            <button
+              type="button"
+              onClick={() => window.location.href = '/contact'}
+              className="flex items-center space-x-2 text-white font-bold hover:text-luxury-gold transition-all duration-300 group bg-transparent border-none cursor-pointer p-0"
+            >
               <Calendar size={20} className="group-hover:scale-110 transition-transform" />
               <span>APPOINTMENT</span>
-            </a>
-            <a className="text-white font-bold hover:text-luxury-gold transition-all duration-300">
+            </button>
+            <a href="tel:+19053264314" className="text-white font-bold hover:text-luxury-gold transition-all duration-300">
               +1 (905) 326-4314
             </a>
           </div>
