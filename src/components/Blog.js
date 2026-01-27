@@ -81,17 +81,18 @@ const blogs = [
 
 function ComponentBlog({ title, date, description, image, onViewDetails }) {
   return (
-    <div className="border rounded-lg shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col w-full md:w-4/5 lg:w-9/12 bg-white transform hover:-translate-y-2 hover:scale-105 mx-auto mb-6">
-      <img className="w-full h-44 object-cover" src={image} alt={title} />{" "}
+    <div className="border border-gray-200 rounded-xl shadow-lg hover:shadow-luxury-lg transition-all duration-300 overflow-hidden flex flex-col w-full md:w-4/5 lg:w-9/12 bg-white transform hover:-translate-y-2 hover:scale-105 mx-auto mb-6 group">
+      <img className="w-full h-44 object-cover group-hover:scale-110 transition-transform duration-500" src={image} alt={title} />{" "}
       <div className="p-6 text-left flex flex-col flex-grow">
-        <h2 className="text-xl font-semibold mb-3 text-gray-900">{title}</h2>
-        <p className="text-gray-700 text-base mb-5 flex-grow">{description}</p>
+        <h2 className="text-xl font-display font-bold mb-3 text-luxury-dark group-hover:text-luxury-gold transition-colors">{title}</h2>
+        <p className="text-gray-700 text-base mb-5 flex-grow leading-relaxed">{description}</p>
         <div className="mt-auto">
           <button
             onClick={onViewDetails}
-            className="text-blue-600 hover:text-blue-800 font-medium underline transition-colors"
+            className="text-luxury-gold hover:text-luxury-gold-light font-semibold underline transition-colors relative group"
           >
             View More Details
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-luxury-gold group-hover:w-full transition-all duration-300"></span>
           </button>
           <div className="flex justify-start items-center pt-2">
             <span className="text-sm font-medium text-gray-600">{date}</span>
@@ -126,7 +127,7 @@ const Blog = () => {
   };
 
   return (
-    <div className="py-10 bg-gray-50">
+    <div className="py-10 bg-gradient-to-b from-white via-gray-50 to-white">
       <div className="container max-w-xs sm:max-w-xs md:max-w-3xl lg:max-w-7xl mx-auto px-2 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
         {currentBlogs.map((blog, index) => (
           <ComponentBlog
@@ -143,7 +144,7 @@ const Blog = () => {
         <button
           onClick={prevPage}
           disabled={currentPage === 1}
-          className="text-lg p-3 hover:bg-gray-50 rounded-full disabled:opacity-50 transition"
+          className="text-lg p-3 hover:bg-luxury-gold/10 rounded-full disabled:opacity-50 transition-all duration-300 text-luxury-dark hover:text-luxury-gold"
         >
           <FiChevronLeft />
         </button>
@@ -151,10 +152,10 @@ const Blog = () => {
           <button
             key={number}
             onClick={() => paginate(number)}
-            className={`px-4 py-2 rounded-md transition-colors ${
+            className={`px-4 py-2 rounded-lg transition-all duration-300 ${
               currentPage === number
-                ? "bg-blue-500 text-white font-semibold"
-                : "text-blue-600 hover:bg-blue-100"
+                ? "bg-gradient-gold text-luxury-dark font-semibold shadow-glow"
+                : "text-luxury-gold hover:bg-luxury-gold/10 hover:scale-110"
             }`}
           >
             {number}
@@ -163,7 +164,7 @@ const Blog = () => {
         <button
           onClick={nextPage}
           disabled={currentPage === pageNumbers.length}
-          className="text-lg p-3 hover:bg-gray-50 rounded-full disabled:opacity-50 transition"
+          className="text-lg p-3 hover:bg-luxury-gold/10 rounded-full disabled:opacity-50 transition-all duration-300 text-luxury-dark hover:text-luxury-gold"
         >
           <FiChevronRight />
         </button>

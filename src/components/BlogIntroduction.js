@@ -22,13 +22,13 @@ const BlogIntroduction = () => {
     const interval = setInterval(() => {
       setFade(false);
       setTimeout(() => {
-        setCurrentIndex((currentIndex + 1) % images.length);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
         setFade(true);
       }, 500);
     }, 10000);
 
     return () => clearInterval(interval);
-  }, [currentIndex, images.length]);
+  }, []);
 
   return (
     <div className="relative text-center bg-white font-light">
